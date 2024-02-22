@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frameset Example</title>
+</head>
+<frameset rows="100, 80, *, 50" noresize>
+    <frame src="header.html">
+    <frame src="navigation.html" style="position: fixed;">
+    <frameset cols="200px, *, 200px">
+        <frame src="left.html">
+        <frame src="main.html" name="main">
+        <frame src="right.html">
+    </frameset>
+    <frame src="footer.html">
+</frameset>
+</html>
