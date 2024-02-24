@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        #font {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        #gallery img {
+            margin: 0 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 350px;
+            transition: transform 0.3s ease;
+        }
+
+        #gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="font">
+        <h1>Gallery</h1>
+        <div id="gallery">
+            <img src="./img/gallery1.jpg" alt="gallery1">
+            <img src="./img/gallery2.jpg" alt="gallery2">
+            <img src="./img/gallery3.jpg" alt="gallery3">
+        </div>
+    </div>
+</body>
+
+</html>
