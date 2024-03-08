@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1 - JS - Anggi Alfian</title>
+</head>
+
+<body>
+    <script>
+        // Data pegawai
+        let nama = "Ridwan";
+        let jabatan = "Manager";
+        let status = "Menikah";
+
+        // Gaji pokok
+        let gajiPokok;
+        switch (jabatan) {
+            case "Manager":
+                gajiPokok = 15000000;
+                break;
+            case "Asisten Manager":
+                gajiPokok = 10000000;
+                break;
+            case "Staff":
+                gajiPokok = 5000000;
+                break;
+            default:
+                gajiPokok = 0;
+        }
+
+        // Tunjangan jabatan
+        let tunjanganJabatan = 0.15 * gajiPokok;
+
+        // Tunjangan keluarga
+        let tunjanganKeluarga = status === "Menikah" ? 0.2 * gajiPokok : 0;
+
+        // BPJS
+        let bpjs = 0.1 * gajiPokok;
+
+        // Total gaji
+        let totalGaji = gajiPokok + tunjanganJabatan + tunjanganKeluarga;
+
+        // Cetak di HTML
+        document.write(
+            "<center>" +
+            "<table border='2'>" +
+            "<thead>" +
+            "<tr>" +
+            "<th>Nama Pegawai</th>" +
+            "<th>Jabatan</th>" +
+            "<th>Status</th>" +
+            "<th>Gaji Pokok</th>" +
+            "<th>Tunjangan Jabatan</th>" +
+            "<th>Tunjangan Keluarga</th>" +
+            "<th>BPJS</th>" +
+            "<th>Total Gaji</th>" +
+            "</tr>" +
+            "</thead>" +
+            "<tbody>" +
+            "<tr>" +
+            `<td>${nama}</td>` +
+            `<td>${jabatan}</td>` +
+            `<td>${status}</td>` +
+            `<td>${gajiPokok}</td>` +
+            `<td>${tunjanganJabatan}</td>` +
+            `<td>${tunjanganKeluarga}</td>` +
+            `<td>${bpjs}</td>` +
+            `<td>${totalGaji}</td>` +
+            "</tr>" +
+            "</tbody>" +
+            "</table>" +
+            "</center>"
+        );
+
+    </script>
+</body>
+
+</html>
