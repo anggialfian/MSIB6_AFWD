@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 3 JS Eksternal - Anggi Alfian</title>
+</head>
+
+<body>
+    <!--Membuat Tabel-->
+    <form action="" id="frm">
+        <table style="margin: auto; width: 15%; background: rgb(231, 231, 231); padding: 15px; 
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; border-radius: 20px ;"">
+            <tr>
+                <th colspan=" 2" style="font-size: 30px;">
+                Form Input
+                </th>
+            </tr>
+
+            <!--Membuat Input Nama-->
+            <tr>
+                <td>
+                    <Label>Nama</Label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Masukkan nama anda" id="nama">
+                </td>
+            </tr>
+
+            <!--Membuat Input Nama-->
+            <tr>
+                <td>
+                    <label for="">Pekerjaan</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Nasukkan pekerjaan anda" id="pekerjaan">
+                </td>
+            </tr>
+
+            <!--Membuat Input Hobi-->
+            <tr>
+                <td>
+                    <label for="">Hobi</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Masukkan hobi anda" id="hobi">
+                </td>
+            </tr>
+
+            <!--Membuat Tombol-->
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Kirim" onclick="dataPerson()">
+                </th>
+            </tr>
+        </table>
+    </form>
+
+    <!--Tampilan Output dari script.js-->
+    <center id="output"></center>
+
+    <!--link menuju script.js-->
+</hr>
+    <script src="/Pemrograman_Javascript/js/script.js"></script>
+</body>
+
+</html>
