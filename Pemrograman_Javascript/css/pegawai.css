@@ -1,0 +1,27 @@
+/* Stylesheet for pegawai.html */
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin: auto;
+    background-color: wheat;
+}
+
+table, th, td {
+    border: 3px solid white;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th, tfoot {
+    font-weight: bold;
+    background-color: navy;
+    color: aliceblue;
+}
