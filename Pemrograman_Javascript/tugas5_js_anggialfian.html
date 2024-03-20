@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 5 - JQuery - Anggi Alfian</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        .image-overlay {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image-text {
+            text-align: center;
+            position: absolute;
+            font-weight: bold;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+        }
+
+        .image-overlay img {
+            display: block;
+            width: 600px;
+            height: auto;
+            border-radius: 5%;
+        }
+
+        .animal-sound {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="image-container">
+            <div class="image-overlay">
+                <div class="image-text">Tugas 5 Javascript - Anggi Alfian <br>
+                STTF</div>
+                <img src="/Pemrograman_Javascript/img/gambar-kucing.jpg" alt="Gambar Kucing" class="animal-image">
+                <div class="animal-sound">
+                    <audio id="animal-audio" src="/Pemrograman_Javascript/sound/suara-kucing.mp3" preload="auto"></audio>
+                    Suara Kucing
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Pemrograman_Javascript/js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var audio = document.getElementById("animal-audio");
+
+            $('.image-overlay').hover(
+                function () {
+                    $(this).find('.animal-image').css('opacity', '0.3');
+                    $(this).find('.animal-sound').fadeIn();
+                    audio.play();
+                },
+                function () {
+                    $(this).find('.animal-image').css('opacity', '1');
+                    $(this).find('.animal-sound').fadeOut();
+                    audio.pause();
+                    audio.currentTime = 0;
+                }
+            );
+        });
+    </script>
+</body>
+
+
+</html>
